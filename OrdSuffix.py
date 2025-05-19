@@ -1,15 +1,16 @@
 def ordinalSuffix(number):
-    num_str = str(number)
-    if num_str[-2:] in ('11', '12', '13'):
-        return num_str + 'th'
-    elif num_str[-1] == '1':
-        return num_str + 'st'
-    elif num_str[-1] == '2':
-        return num_str + 'nd'
-    elif num_str[-1] == '3':
-        return num_str + 'rd'
+    num_string = str(number)
+    if num_string[-2:] in ('11', '12', '13'):
+        #The reason we need 11 12 and 13 is because they end in 1 2 3 which can make them 11st 12nd 13rd
+        return num_string+'th'
+    elif num_string[-1] == '1':
+        return num_string+'st'
+    elif num_string[-1] == '2':
+        return num_string+'nd'
+    elif num_string[-1] == '3':
+        return num_string+'rd'
     else:
-        return num_str + 'th'
+        return num_string+'th'
 
 assert ordinalSuffix(0) == '0th'
 assert ordinalSuffix(1) == '1st'

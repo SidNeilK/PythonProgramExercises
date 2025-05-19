@@ -1,12 +1,14 @@
 def isOdd(number):
     if number != int(number):
+        #Checks if integer
         return False
-    return number % 2 != 0
+    return number%2 !=0
 
 def isEven(number):
     if number != int(number):
+        #Checks if integer
         return False
-    return number % 2 == 0
+    return number%2 == 0
 
 assert isOdd(42) == False
 assert isOdd(9999) == True
